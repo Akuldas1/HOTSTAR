@@ -19,7 +19,7 @@
 export default {
   content:[
     "./index.html",
-    "./src/**/*.{jsx,js}"],
+    "./src/**/*.{html,jsx,js}"],
   theme: {
     extend: {},
     screens: {
