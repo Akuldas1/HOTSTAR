@@ -1,41 +1,5 @@
+
  .nav-items:hover p{
   opacity: 1;
   transition:  0.3s; 
 }
-.nav-item {
-  position: relative;
-  display: inline-block;
-}
-
-.nav-item svg {
-  width: 24px;
-  height: 24px;
-  fill: grey; 
-  transition: fill 0.3s ease; 
-}
-
-.nav-item p {
-  position: absolute;
-  top: 50%;
-  left: calc(100% + 8px); 
-  transform: translateY(-50%);
-  opacity: 0; 
-  transition: opacity 0.3s ease, left 0.3s ease; 
-  color: white;
-  padding: 8px;
- 
-  white-space: nowrap; 
-}
-
-.nav-item:hover svg {
-  fill: white;
-  scale: 1.2;
-}
-
-.nav-item:hover p {
-  transform: translateY(-40%);
-  opacity: 1; 
-  font-weight: bolder;
-  font-family: 'Times New Roman', Times, serif;
-  scale: 1.2;
-} 
