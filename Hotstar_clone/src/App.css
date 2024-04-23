@@ -1,6 +1,6 @@
- .nav:hover p{
+ .nav-items:hover p{
   opacity: 1;
-  transition: left 0.3s; 
+  transition:  0.3s; 
 }
 .nav-item {
   position: relative;
@@ -23,7 +23,7 @@
   transition: opacity 0.3s ease, left 0.3s ease; 
   color: white;
   padding: 8px;
-  border-radius: 4px;
+ 
   white-space: nowrap; 
 }
 
