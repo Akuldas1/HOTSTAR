@@ -1,5 +1,4 @@
-
- .nav-items:hover p{
+.nav-items:hover p{
   opacity: 1;
   transition:  0.3s; 
 }
