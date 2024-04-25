@@ -1,52 +1,53 @@
-import { useEffect } from "react"
-import axios from 'axios'
-function Movies() {
-    useEffect(() => {
-        //     fetch('https://dummyapi.online/api/movies/1')
-        // .then(res => res.json())
-        // .then(data => {
-        //     console.log(data);
-        //     data.map((item) => {
-        //         console.log(item);
-        //         let disp = `<div> <img src=${item.image}></img>
-        //         <h1> ${item.movie}</h1>
-        //          </div>`
-        //         document.getElementById("movie").innerHTML += disp;
-        //     });
-        // })
-        // .catch((error) => {
-        //     console.log(error);
-        // });
-
-        fetch('https://api.sampleapis.com/movies/horror/1')
-            .then(res => res.json())
-            .then(data => {
-                // console.log(data);
-                if (typeof data === 'object') {
-
-                    console.log(data);
-                    let imageUrl = data.posterURL
-                    let disp = `<div> <img src="${imageUrl}" height="0px" width="150px"></img>
-            </div>`;
-                    document.getElementById("movie").innerHTML = disp;
-                    console.log("Data is not in the expected format.");
-                }
-            })
-            .catch((error) => {
-                console.log(error);
-            });
 
 
-    })
-    return (
-        <>
-            <div className="horror left-28">
-                <h3 className="text-white font-bold text-lg">Horror</h3>
-                <div id="movie" className=" relative">
-                </div>
-            </div>
-        </>
-    )
+import React, { useEffect, useState } from 'react';
+import "./Movie.css"
+
+export default function Movies() {
+  const [horrorMovies, setHorrorMovies] = useState([]);
+  const [comedyMovies, setComedyMovies] = useState([]);
+  
+  const fetchMovies = async (genre, setterFunction) => {
+    try {
+      const resp = await fetch(`https://api.sampleapis.com/movies/${genre}`);
+      const json = await resp.json();
+      setterFunction(json);
+    } catch (error) {
+      console.error(`Error fetching ${genre} movies:`, error);
+    }
+  }
+
+  useEffect(() => {
+    fetchMovies('horror', setHorrorMovies);
+    fetchMovies('comedy', setComedyMovies);
+  }, []);
+
+  return (
+    <div className='movies-container flex flex-col gap-8'>
+      <div className='genre-container'>
+        <p className='text-white font-bold text-3xl'>Horror</p>
+        <div className="movie-list flex gap-4 flex-grow overflow-x-scroll">
+          {horrorMovies.map(movie => (
+            <img
+              src={movie.posterURL}
+              alt={movie.title}
+              className="movie-poster h-64 rounded"
+            />
+          ))}
+        </div>
+      </div>
+      <div className='genre-container'>
+        <p className='text-white font-bold text-3xl'>Comedy</p>
+        <div className="movie-list flex gap-4 flex-grow overflow-x-scroll">
+          {comedyMovies.map(movie => (
+            <img
+              src={movie.posterURL}
+              alt={movie.title}
+              className="movie-poster h-52"
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
-
-export default Movies
