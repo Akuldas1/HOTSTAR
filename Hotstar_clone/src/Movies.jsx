@@ -31,7 +31,7 @@ export default function Movies() {
             <img
               src={movie.posterURL}
               alt={movie.title}
-              className="movie-poster h-64 rounded"
+              className="movie-poster h-64 rounded hover:scale-125"
             />
           ))}
         </div>
