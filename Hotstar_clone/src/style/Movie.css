@@ -1,0 +1,29 @@
+.movies-container {
+  position: relative;
+  bottom: 200px;
+  left: 7rem;
+}
+
+.movie-slide {
+  position: relative;
+}
+
+
+.movie-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.movie-slide:hover .movie-details {
+  display: block;
+}
+
+.movie-slide:hover img {
+  opacity: 0;
+}
