@@ -1,6 +1,7 @@
 import Nav from "./components/Nav"
 import Home from "./page/Home"
 import Movies from "./services/Movies"
+import Images from "./components/Images"
 // import 'bootstrap/dist/css/bootstrap.min.css';
 //import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -10,7 +11,6 @@ function App() {
       <Nav />
       <Home />
       <Movies/>
-    
     </>
   )
 }

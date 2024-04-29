@@ -6,6 +6,7 @@
 
 .movie-slide {
   position: relative;
+  left: -54px;
 }
 
 
@@ -25,5 +26,6 @@
 }
 
 .movie-slide:hover img {
-  opacity: 0;
-}
+  opacity: 1;
+} 
+

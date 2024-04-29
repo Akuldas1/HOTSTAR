@@ -1,5 +1,5 @@
 import '../style/Nav.css'
-import React from 'react';
+import React, { useState } from 'react';
 import { FaArrowAltCircleRight, FaArrowRight, FaEnvelope, FaGreaterThan, FaLongArrowAltRight, FaReact } from 'react-icons/fa';
 import { RiAccountCircleLine } from "react-icons/ri";
 import { MdAccountCircle } from "react-icons/md";
@@ -9,13 +9,12 @@ function Nav() {
   return (
     <>
       <div className='nav bg-transparent h-screen w-28 z-10 fixed my-2'>
-        <div className='img mt-6 gap-3'>
+        <div className='img mt-6 grid gap-3'>
           <img src='https://img.hotstar.com/image/upload/v1656431456/web-images/logo-d-plus.svg' className=' ml-8'></img>
-          {/* <button className='sub flex justify-center items-center text-green-500 bg-zinc-500 bg-opacity-40 text-xs rounded-full ml-5'>Subscribe<FaGreaterThan className='fill-green-500 h-3 mt-0.5'/></button> */}
-          {/* <p className='bg-white text-black w-16 p-0.5 px-1 rounded-full'>Subcribe<FaGreaterThan/></p> */}
+          <button className='sub flex gap-1 justify-center items-center text-green-500 bg-zinc-500 bg-opacity-40 text-xs rounded-full ml-5 w-20'>Subscribe<FaGreaterThan className='fill-green-500 h-3 mt-0.4'/></button>
         </div>
 
-        <div className='nav-items justify-center items-center flex flex-col gap-10 my-11 font-bold laptops: my-28'>
+        <div className='nav-items justify-center items-center flex flex-col gap-10 my-11 font-bold'>
           <div className='text-gray-400 hover:text-white flex relative hover:opacity-1 fill-gray-500 hover:fill-white hover:scale-110 '>
           {/* <MdAccountCircle className='fill-yellow-200'/> */}
           {/* <VscAccount className='fill-white'/> */}
@@ -64,3 +63,4 @@ function Nav() {
 }
 
 export default Nav
+

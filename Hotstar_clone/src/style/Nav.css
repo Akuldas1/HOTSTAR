@@ -2,24 +2,24 @@ body{
   box-sizing: border-box;
 }
 .nav-items:hover p{
-  opacity: 1;
+  opacity:1;
   transition:  0.3s; 
+  z-index: 5;
 }
 
 .sub{
   padding: 2px 0px 2px 0px;
 }
 
- .nav-items:hover::after {
-content: "";
- color: white;
+   /* .nav-items:hover::after {
+  content: "";
+  color: white;
   position: fixed;
-  top: 0;
+  top:0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.959), rgba(0, 0, 0, 0.466));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.959),  rgba(0, 0, 0, 0.329));
   z-index:-2; 
 } 
-
-
+ */
