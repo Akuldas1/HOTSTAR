@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import "../style/Movie.css"
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { FaCircle, FaPlay } from 'react-icons/fa'
 
 export default function Movies() {
   const [horrorMovies, setHorrorMovies] = useState([]);
@@ -22,7 +23,7 @@ export default function Movies() {
   }
 
   useEffect(() => {
-    fetchMovies('western', setHorrorMovies);
+    fetchMovies('animation', setHorrorMovies);
     fetchMovies('comedy', setComedyMovies); 
   }, []);
 
@@ -49,13 +50,13 @@ export default function Movies() {
   return (
     <>
       <div className='movies-container flex flex-col gap-8'>
-        <div className='genre-container flex flex-col gap-1 w-11/12'>
+        <div className='genre-container flex flex-col gap-1 z-10'>
           <p className='text-blue-100 font-semibold text-xl font-body'>Horror Movies</p>
-          <div className="movie-list flex gap-4">
+          <div className="movie-list flex gap-4 w-full">
             <button className="arrow-btn left-arrow p-2 text-white z-10 w-10 bg-gradient-to-r from-black" onClick={goToPrevHorrorMovie}>
               <IoIosArrowBack className='text-2xl'/>
             </button>
-            {horrorMovies.slice(horrorIndex, horrorIndex + 6).map((movie) => (
+            {horrorMovies.slice(horrorIndex, horrorIndex + 8).map((movie) => (
               <div
                 key={movie.id}
                 className="movie-slide"
@@ -65,13 +66,13 @@ export default function Movies() {
                 <img
                   src={movie.posterURL}
                   alt={movie.title}
-                  className="movie-poster h-60 rounded hover:scale-125"
+                  className="movie-poster h-52 rounded hover:scale-125"
                 />
                 {hoveredMovie === movie && (
                   <div className="movie-details bg-black h-96 w-72 z-20">
                     <img src={movie.posterURL} alt={movie.title} className="movie-poster h-60 w-72" />
                     <div className='p-2 px-4 flex gap-2'>
-                      <button className='text-black bg-white w-3/4 p-2 font-bold rounded'>Watch now</button>
+                      <button className='text-black bg-white w-3/4 pl-9 font-bold rounded p-2 flex gap-3'><FaPlay className='relative h-3 top-1.5 w-3 left'/>Watch now</button>
                       <button className='bg-white/55 p-2 w-10 rounded'>+</button>
                     </div>
                     <h3 className='text-white font-bold text-center'>2024 2h16min UA</h3>
@@ -80,19 +81,19 @@ export default function Movies() {
                 )}
               </div>
             ))}
-            <button className="arrow-btn right-arrow text-white z-50 relative right-9" onClick={goToNextHorrorMovie}>
-              <IoIosArrowForward className='text-2xl'/>
+            <button className="arrow-btn right-arrow text-white z-50" onClick={goToNextHorrorMovie}>
+              <IoIosArrowForward className='text-2xl h-full w-full relative right-32'/>
             </button>
           </div>
         </div>
         
-        <div className='genre-container flex flex-col gap-1 w-11/12'>
+        <div className='genre-container flex flex-col gap-1'>
           <p className='text-blue-100 font-semibold text-xl font-body'>Comedy Movies</p>
-          <div className="movie-list flex gap-4">
-            <button className="arrow-btn left-arrow p-2 text-white z-10 w-10 bg-gradient-to-r from-black" onClick={goToPrevComedyMovie}>
+          <div className="movie-list flex gap-4 z-20">
+            <button className="arrow-btn left-arrow p-2 text-white z-10 w-10" onClick={goToPrevComedyMovie}>
               <IoIosArrowBack className='text-2xl'/>
             </button>
-            {comedyMovies.slice(comedyIndex, comedyIndex + 6).map((movie) => (
+            {comedyMovies.slice(comedyIndex, comedyIndex + 7).map((movie) => (
               <div
                 key={movie.id}
                 className="movie-slide"
@@ -102,7 +103,7 @@ export default function Movies() {
                 <img
                   src={movie.posterURL}
                   alt={movie.title}
-                  className="movie-poster h-60 rounded hover:scale-125"
+                  className="movie-poster h-60 rounded w-60"
                 />
                 {hoveredMovie === movie && (
                   <div className="movie-details bg-black h-96 w-72 z-20">
@@ -118,7 +119,7 @@ export default function Movies() {
               </div>
             ))}
             <button className="arrow-btn right-arrow text-white z-50 relative right-9" onClick={goToNextComedyMovie}>
-              <IoIosArrowForward className='text-2xl'/>
+              <IoIosArrowForward className='text-2xl relative right-14'/>
             </button>
           </div>
         </div>

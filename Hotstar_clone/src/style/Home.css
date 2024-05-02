@@ -1,3 +1,8 @@
+.mute-toggle{
+    position:absolute;
+    bottom:14rem;
+    left: 70rem;
+}
 .subscribe{
     background-color: rgba(255, 255, 255, 0.295);
     position:absolute;
@@ -32,5 +37,5 @@
 .component{
     position:absolute;
     top:28.5rem;
-    left: 46rem;
+    left: 47rem;
 }

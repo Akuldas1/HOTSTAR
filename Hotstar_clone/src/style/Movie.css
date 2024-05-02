@@ -2,13 +2,14 @@
   position: relative;
   bottom: 200px;
   left: 7rem;
+  /* background-color: blue; */
+  width: 100%;
 }
 
 .movie-slide {
   position: relative;
   left: -54px;
 }
-
 
 .movie-details {
   position: absolute;

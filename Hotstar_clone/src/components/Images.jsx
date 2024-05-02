@@ -60,7 +60,7 @@ function Images() {
         <>
             <div className="slider-container w-96 flex flex-col gap-1">
                 <Slider {...settings}>
-                    <div className='-z-10'>
+                    <div className=''>
                         <img src="https://img10.hotstar.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/6363/1714177996363-h" className='h-11 w-20 rounded opacity-45 hover:opacity-100 hover:scale-110'/>
                     </div>
                     <div>

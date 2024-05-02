@@ -1,14 +1,29 @@
 import video from '../assets/video2.mp4'
 import "../style/Home.css"
 import Image from '../components/Images'
-import { FaCircle, FaExclamationCircle, FaPlay } from 'react-icons/fa'
-import { BiVolumeMute } from "react-icons/bi";
+import { FaCircle, FaPlay } from 'react-icons/fa'
+import { PiSpeakerSlash, PiSpeakerHighLight } from "react-icons/pi";
+import Movies from '../services/Movies'
+import { useState } from 'react'
 function Home() {
+
+  const [isMuted, setIsMuted] = useState(true);
+
+  const toggleMute = () => {
+    setIsMuted(prevMuted => !prevMuted);
+  }; 
+
   return (
     <>
-      <video src={video} autoPlay loop muted className=''/>
+      <video src={video} autoPlay loop muted={isMuted} className=''/>
+      <button
+          type=''
+          className='mute-toggle text-xl px-8 py-3.5 rounded-xl '
+          onClick={toggleMute}
+        >
+          {isMuted ? <PiSpeakerSlash className='unmute fill-white'/> : <PiSpeakerHighLight className='mute fill-white'/>}
+        </button>
       <div className='video h-2/3'>
-      <BiVolumeMute className='fill-white absolute top-96 right-14 w-8 h-6'/>
         <img src='https://img10.hotstar.com/image/upload/f_auto,h_156/sources/r1/cms/prod/218/1640218-t-af2c7898f613' className='absolute left-28 top-10'></img>
         <ul className='text-white flex gap-4 absolute left-28 top-60 font-body font-bold'>
           <li>2023 </li>
@@ -33,9 +48,9 @@ function Home() {
           <Image/>
           </div>
         </div>
-
       </div>
     </>
   )
 }
 export default Home
+
