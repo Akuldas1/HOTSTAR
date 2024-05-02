@@ -30,3 +30,22 @@
   opacity: 1;
 } 
 
+.arrow{
+  right: 7rem;
+}
+
+/* @media (max-width: 768px) {
+  .movies-container {
+    left: 0;
+    bottom: 0;
+    padding: 0 1rem;
+  }
+
+  .movie-slide {
+    left: 0;
+  }
+
+  .arrow {
+    right: 0;
+  }
+} */

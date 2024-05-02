@@ -16,7 +16,6 @@ function Images() {
     // }, []);
     
     const PrevArrow = (props) => {
-        console.log(props);
         const { onClick ,currentSlide} = props;
         return (
             <>

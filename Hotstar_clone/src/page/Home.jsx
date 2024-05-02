@@ -37,7 +37,7 @@ function Home() {
         <br></br>
         <br></br><br></br>
         <div className='desc'>
-        <p className='text-gray-300 absolute left-28 top-72 w-1/3 font-body'>Every fight begins with a failure! Braving against the odds, Manoj Kumar Sharma puts it all on the line to crack the nation’s much sought-after exam: UPSC.</p>
+        <p className='text-gray-300 absolute left-28 top-72 w-1/3 font-body sm:hidden'>Every fight begins with a failure! Braving against the odds, Manoj Kumar Sharma puts it all on the line to crack the nation’s much sought-after exam: UPSC.</p>
         <p className='text-white absolute top-96 left-28  font-semibold font-body'>Biopic &nbsp; |&nbsp; Common-Man Struggles &nbsp; | &nbsp; Underdog &nbsp; | &nbsp; Thought-provoking</p>
         </div>
       
