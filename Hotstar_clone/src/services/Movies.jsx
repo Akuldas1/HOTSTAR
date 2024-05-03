@@ -108,7 +108,7 @@ export default function Movies() {
         <div className='genre-container flex flex-col gap-1'>
           <p className='text-blue-100 font-semibold text-xl font-body'>Comedy Movies</p>
           <div className="movie-list flex gap-4 w-full">
-            <button className="arrow-btn left-arrow p-2 text-white z-0 w-10 bg-gradient-to-r from-black" onClick={goToPrevComedyMovie}>
+            <button className="arrow-btn left-arrow p-2 text-white z-10 w-10" onClick={goToPrevComedyMovie}>
               <IoIosArrowBack className='text-2xl' />
             </button>
             {comedyMovies.slice(comedyIndex, comedyIndex + 8).map((movie) => (
