@@ -1,8 +1,7 @@
-.movies-container {
+ .movies-container {
   position: relative;
   bottom: 200px;
   left: 7rem;
-  /* background-color: blue; */
   width: 100%;
 }
 
@@ -24,15 +23,21 @@
 
 .movie-slide:hover .movie-details {
   display: block;
+ 
 }
 
 .movie-slide:hover img {
   opacity: 1;
 } 
 
+.movie-poster{
+  width: 100%;
+  object-fit: cover;
+}
+
 .arrow{
   right: 7rem;
-}
+} 
 
 /* @media (max-width: 768px) {
   .movies-container {
@@ -49,3 +54,4 @@
     right: 0;
   }
 } */
+

@@ -1,9 +1,25 @@
-import Nav from "../components/Nav"
+import { useState } from 'react';
 import { FaCircle, FaPlay } from 'react-icons/fa'
+import { PiSpeakerSlash, PiSpeakerHighLight } from "react-icons/pi";
+import vid from "../assets/io.mp4"
 
 function InsideOut(){
+  const [isMuted, setIsMuted] = useState(true);
+
+  const toggleMute = () => {
+    setIsMuted(prevMuted => !prevMuted);
+  };
+
     return(
-        <>
+      <>
+      <video src={vid} autoPlay loop muted={isMuted} className='fixed' />
+      <button
+        type=''
+        className='mute-toggle text-xl px-8 py-3.5 rounded-xl '
+        onClick={toggleMute}
+      >
+        {isMuted ? <PiSpeakerSlash className='unmute fill-white' /> : <PiSpeakerHighLight className='mute fill-white' />}
+      </button>
         <div>
         <img src="https://img10.hotstar.com/image/upload/f_auto,h_156/sources/r1/cms/prod/2736/1372736-t-7377aad02e68" className="absolute left-28 top-10"></img>
         <ul className='text-white flex gap-4 absolute left-28 top-60 font-body font-bold'>
