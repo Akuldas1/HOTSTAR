@@ -7,7 +7,7 @@ function Nav() {
       <div className='nav bg-transparent h-screen w-28 z-10 fixed my-2'>
         <div className='img mt-6 grid gap-3'>
           <img src='https://img.hotstar.com/image/upload/v1656431456/web-images/logo-d-plus.svg' className=' ml-8'></img>
-          <button className='sub flex gap-1 justify-center items-center font text-yellow-500 bg-zinc-500 bg-opacity-40 text-xs rounded-full ml-5 w-20'>Subscribe<FaGreaterThan className='fill-green-500 h-3 mt-0.4' /></button>
+          <button className='sub flex gap-1 justify-center items-center font-body text-yellow-500 bg-zinc-500 bg-opacity-40 text-xs rounded-full ml-5 w-20'>Subscribe<FaGreaterThan className='fill-green-500 h-3 mt-0.4' /></button>
         </div>
 
         <div className='nav-items justify-center items-center flex flex-col gap-10 my-11 font-bold z'>

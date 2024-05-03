@@ -71,7 +71,7 @@ export default function Movies() {
                 />
                 {hoveredMovie === movie && (
                   <div className="movie-details bg-custom h-96 w-72 z-10 p-0 rounded-xl">
-                    <img src={movie.posterURL} alt={movie.title} className="movie-poster h-48 w-full rounded-xl"/>
+                    <img src={movie.posterURL} alt={movie.title} className="movie-poster h-48 w-full rounded-t-xl"/>
                     <div className='p-2 px-4 flex gap-2'>
                       {index === 0 ? ( 
                         <Link to={`/detailed/${movie.id}`}>
@@ -125,7 +125,7 @@ export default function Movies() {
                 />
                 {hoveredMovie === movie && (
                   <div className="movie-details bg-custom h-96 w-72 z-10 p-0 rounded-xl">
-                    <img src={movie.posterURL} alt={movie.title} className="movie-poster h-48 w-full rounded-xl"/>
+                    <img src={movie.posterURL} alt={movie.title} className="movie-poster h-48 w-full rounded-t-xl"/>
                     <div className='p-2 px-4 flex gap-2'>
                       <button className='text-black bg-white px-10 py-3 h-12 w-48 font-bold rounded p-2 flex gap-3'><FaPlay className='relative h-3 top-1.5 w-3 left' />Watch now</button>
                       <button className='bg-white/55 p-2 w-12 rounded'>+</button>
