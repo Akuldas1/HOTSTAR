@@ -7,14 +7,6 @@ import 'slick-carousel/slick/slick-theme.css';
 
 function Images() {
     const [horrorMovies, setHorrorMovies] = useState([]);
-
-    // useEffect(() => {
-    //     fetch('https://api.sampleapis.com/movies/horror')
-    //         .then(response => response.json())
-    //         .then(data => setHorrorMovies(data))
-    //         .catch(err => console.log(err));
-    // }, []);
-    
     const PrevArrow = (props) => {
         const { onClick ,currentSlide} = props;
         return (

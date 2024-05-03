@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import "../style/Movie.css"
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaCircle, FaPlay } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 export default function Movies() {
   const [horrorMovies, setHorrorMovies] = useState([]);

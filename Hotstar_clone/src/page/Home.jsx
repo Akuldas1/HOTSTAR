@@ -47,6 +47,7 @@ function Home() {
           <div className='component'>
           <Image/>
           </div>
+          <Movies />
         </div>
       </div>
     </>
