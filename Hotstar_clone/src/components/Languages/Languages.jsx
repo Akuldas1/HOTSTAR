@@ -97,7 +97,7 @@ function Languages() {
                 <div className=''>
                 <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6672/1526672-a-eafe6913c6c8" alt="" className='w-60 rounded'/>  
                 </div>
-                <div className='t'>
+                <div className=''>
                 <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6659/1526659-a-7271cf19114e" alt="" className='w-60 rounded'/>
                 </div>
             </Slider>
