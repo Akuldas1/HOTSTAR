@@ -9,8 +9,6 @@ import Languages from '../../components/Languages/Languages';
 import Footer from '../../components/Footer/Footer';
 import HorrorMovies from '../../components/Movies/HorrorMovies';
 import ComedyMovies from '../../components/Movies/ComedyMovies';
-import Disney from '../../components/disney/Disney';
-
 
 function Home() {
 
