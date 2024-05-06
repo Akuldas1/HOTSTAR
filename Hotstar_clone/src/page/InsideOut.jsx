@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { FaCircle, FaPlay } from 'react-icons/fa'
 import { PiSpeakerSlash, PiSpeakerHighLight } from "react-icons/pi";
-import vid from "../assets/io.mp4"
+import vid from "../assets/video/video-2.mp4"
 
 function InsideOut(){
   const [isMuted, setIsMuted] = useState(true);
@@ -12,7 +12,8 @@ function InsideOut(){
 
     return(
       <>
-      <video src={vid} autoPlay loop muted={isMuted} className='fixed' />
+      <video src={vid} autoPlay loop muted={isMuted} className='' />
+
       <button
         type=''
         className='mute-toggle text-xl px-8 py-3.5 rounded-xl '
@@ -35,6 +36,11 @@ function InsideOut(){
           <p className='text-white absolute top-96 left-28  font-semibold font-body'>Animation &nbsp; |&nbsp; Kids &nbsp; | &nbsp; Fantasy &nbsp; | &nbsp;Adventure</p>  
           <button type='button' className='subscribe text-black bg-white text-xl font-bold left-28 px-8 py-3.5 rounded-xl font-body hover:scale-105'><FaPlay className='absolute h-7 w-3 left-14'/> Subscribe to watch</button> 
           <button type='button' className='plus text-white font-bold text-lg px-6 py-3.5 rounded-xl'>+</button>
+        </div>
+        <div className='text-white'>
+        <p className='text-blue-100 font-semibold text-xl font-body relative left-28'>More Like This</p>
+        <hr></hr>
+        
         </div>
         </>
     )

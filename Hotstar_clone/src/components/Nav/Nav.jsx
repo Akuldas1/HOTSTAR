@@ -1,4 +1,4 @@
-import '../style/Nav.css'
+import '../Nav/Nav.css'
 import React, { useState } from 'react';
 import { FaGreaterThan } from 'react-icons/fa';
 function Nav() {

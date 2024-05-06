@@ -1,4 +1,4 @@
-import Nav from "./components/Nav"
+import Nav from "./components/Nav/Nav";
 import Home from "./page/Home"
 import InsideOut from "./page/InsideOut"
 import { BrowserRouter, Route, Routes } from "react-router-dom";

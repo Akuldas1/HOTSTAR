@@ -1,12 +1,12 @@
-import video from '../assets/video2.mp4'
+import video from '../assets/video/video.mp4'
 import "../style/Home.css"
-import Image from '../components/Images'
+import Image from '../components/Images/Images'
 import { FaCircle, FaPlay } from 'react-icons/fa'
 import { PiSpeakerSlash, PiSpeakerHighLight } from "react-icons/pi";
 import Movies from '../services/Movies'
 import { useState } from 'react'
-import Languages from '../components/Languages';
-import Footer from '../components/Footer';
+import Languages from '../components/Languages/Languages';
+import Footer from '../components/Footer/Footer';
 
 
 function Home() {
@@ -39,7 +39,7 @@ function Home() {
         </ul>
         <br></br>
         <br></br><br></br>
-        <div className='desc'>
+        <div className='desc desktop:hidden mobiles:block'>
           <p className='text-gray-300 absolute left-28 top-72 w-1/3 font-body'>Every fight begins with a failure! Braving against the odds, Manoj Kumar Sharma puts it all on the line to crack the nation’s much sought-after exam: UPSC.</p>
           <p className='text-white absolute top-96 left-28  font-semibold font-body'>Biopic &nbsp; |&nbsp; Common-Man Struggles &nbsp; | &nbsp; Underdog &nbsp; | &nbsp; Thought-provoking</p>
         </div>

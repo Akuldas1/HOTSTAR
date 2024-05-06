@@ -10,21 +10,11 @@ export default {
         custom: '#0e0e10'
       }
     },
-    // screens: {
-    //   "desktop": "1800px",
-    //   "laptops": "1500px",
-    //   "tablets": "900px",
-    //   "mobiles": "400px"
-    // },
     screens: {
-      'tablet': '640px',
-      // => @media (min-width: 640px) { ... }
-
-      'laptop': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      'desktop': '1280px',
-      // => @media (min-width: 1280px) { ... }
+      "desktop": "1920px",
+      "laptops": "1300px",
+      "tablets": "900px",
+      "mobiles": "400px"
     },
     fontFamily:{
        body:['Inter']
