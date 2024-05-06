@@ -9,6 +9,7 @@ import Languages from '../../components/Languages/Languages';
 import Footer from '../../components/Footer/Footer';
 import HorrorMovies from '../../components/Movies/HorrorMovies';
 import ComedyMovies from '../../components/Movies/ComedyMovies';
+import Disney from '../../components/disney/Disney';
 
 
 function Home() {
@@ -55,9 +56,7 @@ function Home() {
           <div className='flex flex-col gap-8'>
           {/* <Movies /> */}
           <HorrorMovies/>
-        
           <ComedyMovies/>
-     
           </div>
           <div className='relative bottom-40 h-10 p-1 left-28'>
             <p className='text-blue-100 font-semibold text-xl font-body mobiles:hidden tablets:hidden laptops:block'>Popular Languages</p>
