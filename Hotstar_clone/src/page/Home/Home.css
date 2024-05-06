@@ -39,3 +39,21 @@
     top:28.5rem;
     left: 47rem;
 }
+
+@media screen and (max-width: 768px) {
+    .subscribe,
+    .plus {
+        position: static; 
+        width: auto;
+        left: 10%;
+    }
+}
+
+/* @media (max-width: 768px){
+    .subscribe,
+    .plus {
+        position: static; 
+        width: auto;
+        left: 10%;
+    }
+} */

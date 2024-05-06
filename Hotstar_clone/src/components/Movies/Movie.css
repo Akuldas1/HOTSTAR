@@ -39,9 +39,9 @@
   right: 7rem;
 } 
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .movies-container {
-    left: 0;
+    left: 10%;
     bottom: 0;
     padding: 0 1rem;
   }
@@ -53,5 +53,5 @@
   .arrow {
     right: 0;
   }
-} */
+}
 

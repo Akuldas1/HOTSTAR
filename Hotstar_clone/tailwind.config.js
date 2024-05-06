@@ -11,11 +11,14 @@ export default {
       }
     },
     screens: {
-      "desktop": "1920px",
-      "laptops": "1300px",
+      "desktop": "1900px",
+      "laptops": "1294px",
       "tablets": "900px",
       "mobiles": "400px"
     },
+    // screens: {
+    //   "xs":"320px"
+    // },
     fontFamily:{
        body:['Inter']
     }

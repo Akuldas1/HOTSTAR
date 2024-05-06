@@ -45,12 +45,39 @@ function Languages() {
         TotalSlidesCount: 10,
         currentSlide: 0,
         prevArrow: <PrevArrow />,
-        nextArrow: <NextArrow />
-    };
+        nextArrow: <NextArrow />,
+
+        // responsive: [
+        //     {
+        //       breakpoint: 1024,
+        //       settings: {
+        //         slidesToShow: 3,
+        //         slidesToScroll: 3,
+        //         infinite: true,
+        //         dots: true
+        //       }
+        //     },
+        //     {
+        //       breakpoint: 600,
+        //       settings: {
+        //         slidesToShow: 2,
+        //         slidesToScroll: 2,
+        //         initialSlide: 2
+        //       }
+        //     },
+        //     {
+        //       breakpoint: 480,
+        //       settings: {
+        //         slidesToShow: 1,
+        //         slidesToScroll: 1
+        //       }
+        //     }
+        //   ]
+    };  <div className=''></div>
 
     return (
         <>
-        <div className='relative flex flex-col gap-32 h-10'>
+        <div className='relative flex flex-col gap-32 h-10 mobiles:hidden tablets:hidden laptops:block'>
             <Slider {...settings}>
                 <div className=''>
                    <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6661/1526661-a-00b818b5bc0e" alt="" className='w-60 rounded'/>
