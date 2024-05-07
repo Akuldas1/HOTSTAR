@@ -30,16 +30,18 @@ const ComedyMovies = () => {
 
     return (
         <div className='movies-container mobiles:grid-cols-5'>
-            <div className='genre-container flex flex-col gap-1'>
+            <div className='genre-container flex flex-col gap-1 flex-grow'>
                 <p className='text-blue-100 font-semibold text-xl font-body'>Comedy Movies</p>
-                <div className="movie-list flex gap-4 w-full">
+                <div className="movie-list flex gap-2 w-full flex-grow">
                     <button className="arrow-btn left-arrow p-2 text-white z-10 w-10" onClick={goToPrevComedyMovie}>
                         <IoIosArrowBack className='text-2xl' />
                     </button>
-                    {comedyMovies.slice(comedyIndex, comedyIndex + 8).map((movie) => (
+                    {/* {comedyMovies.slice(comedyIndex, comedyIndex + 8).map((movie) => ( */}
+                    {comedyMovies.slice(comedyIndex, comedyIndex + (window.innerWidth <= 768 ? 3 : 8)).map((movie, index) => (
+
                         <div
                             key={movie.id}
-                            className="movie-slide"
+                            className="movie-slide w-full"
                             onMouseEnter={() => setHoveredMovie(movie)}
                             onMouseLeave={() => setHoveredMovie(null)}
                         >

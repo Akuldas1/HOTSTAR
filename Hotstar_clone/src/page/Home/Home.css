@@ -45,8 +45,13 @@
     .plus {
         position: static; 
         width: auto;
-        left: 10%;
+        margin-left: 6rem;
     }
+
+    .play{
+        display: none;
+    }
+
 }
 
 /* @media (max-width: 768px){

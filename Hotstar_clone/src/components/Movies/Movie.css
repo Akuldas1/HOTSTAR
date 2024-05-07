@@ -7,7 +7,7 @@
 
 .movie-slide {
   position: relative;
-  left: -54px;
+  left: -49px;
 }
 
 .movie-details{
@@ -61,6 +61,7 @@
   }
 
   .movie-slide {
+    width: 40%;
     left: 0;
   }
 

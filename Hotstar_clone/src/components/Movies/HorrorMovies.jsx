@@ -30,16 +30,17 @@ const HorrorMovies = () => {
 
     return (
         <div className='movies-container'>
-            <div className='genre-container flex flex-col gap-1'>
+            <div className='genre-container flex flex-col gap-1 flex-grow'>
                 <p className='text-blue-100 font-semibold text-xl font-body'>Horror Movies</p>
-                <div className="movie-list flex gap-4 w-full">
+                <div className="movie-list flex gap-2 w-full flex-grow">
                     <button className="arrow-btn left-arrow p-2 text-white z-10 w-10" onClick={goToPrevHorrorMovie}>
                         <IoIosArrowBack className='text-2xl' />
                     </button>
-                    {horrorMovies.slice(horrorIndex, horrorIndex + 8).map((movie, index) => (
+                    {/* {horrorMovies.slice(horrorIndex, horrorIndex + 8).map((movie, index) => ( */}
+                    {horrorMovies.slice(horrorIndex, horrorIndex + (window.innerWidth <= 768 ? 3 : 8)).map((movie, index) => (
                         <div
                             key={movie.id}
-                            className="movie-slide"
+                            className="movie-slide  mobiles:w-1/3 tablets:w-1/4 laptops:w-1/6"
                             onMouseEnter={() => setHoveredMovie(movie)}
                             onMouseLeave={() => setHoveredMovie(null)}
                         >
@@ -91,3 +92,22 @@ const HorrorMovies = () => {
 export default HorrorMovies;
 
 
+// const getNumberOfMoviesToDisplay = () => {
+//     if (window.innerWidth <= 768) {
+//         return 6; // Display 6 movies for viewport width less than or equal to 768px
+//     } else if (window.innerWidth <= 1024) {
+//         return 7; // Display 7 movies for viewport width less than or equal to 1024px
+//     } else {
+//         return 8; // Default: Display 8 movies for other viewport widths
+//     }
+// };
+
+// return (
+//     <div className='movies-container'>
+//         <div className='genre-container flex flex-col gap-1 flex-grow'>
+//             <p className='text-blue-100 font-semibold text-xl font-body'>Horror Movies</p>
+//             <div className="movie-list flex gap-2 w-full flex-grow">
+//                 <button className="arrow-btn left-arrow p-2 text-white z-10 w-10" onClick={goToPrevHorrorMovie}>
+//                     <IoIosArrowBack className='text-2xl' />
+//                 </button>
+//                 {horrorMovies.slice(horrorIndex, horrorIndex + getNumberOfMoviesToDisplay()).map((movie, index) => (

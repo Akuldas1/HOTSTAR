@@ -12,7 +12,7 @@ function Disneyy() {
     const [isHovered, setIsHovered] = useState(false);
     return (
         <>
-            <div className="flex relative left-32 gap-2">
+            <div className="flex relative left-28 gap-2">
                 <div className="img-cont" onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}>
                     <img src={Disney} className="thumbnail w-44 rounded"/>
