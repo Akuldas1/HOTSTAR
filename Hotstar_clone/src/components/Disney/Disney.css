@@ -1,0 +1,25 @@
+
+.img-cont {
+    position: relative;
+    display: inline-block;
+}
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+}
+
+.vid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.img-cont:hover .vid {
+    display: block;
+    scale: 1.1;
+}
