@@ -30,7 +30,7 @@ function Home() {
       </button>
       <div className='video h-2/3'>
         <img src='https://img10.hotstar.com/image/upload/f_auto,h_156/sources/r1/cms/prod/218/1640218-t-af2c7898f613' className='absolute left-28 top-10'></img>
-        <ul className='text-white flex gap-4 absolute left-28 top-60 font-body font-bold'>
+        <ul className='text-white flex gap-4 absolute left-28 top-60 font-body font-bold mobiles:w-5 mobiles:flex mobiles:gap-2 tablets:w-10 flex gap-3 laptops:w-full'>
           <li>2023 </li>
           <FaCircle className='h-2 relative top-2'></FaCircle>
           <li>2h 26min</li>
@@ -59,7 +59,9 @@ function Home() {
           </div>
           <div className='relative bottom-40 h-10 p-1 left-28'>
             <p className='text-blue-100 font-semibold text-xl font-body mobiles:hidden tablets:hidden laptops:block'>Popular Languages</p>
+            <div className='mobiles:hidden tablets:block laptops:block'>
             <Languages />
+            </div>
           </div>
           <div className='flex flex-col gap-16'>
             <Disneyy />

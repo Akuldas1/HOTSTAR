@@ -51,6 +51,7 @@ const HorrorMovies = () => {
                             {hoveredMovie === movie && (
                                 <div className="movie-details bg-custom h-96 w-72 z-10 p-0 rounded-xl">
                                     <img src={movie.posterURL} alt={movie.title} className="movie-poster h-48 w-full rounded-t-xl" />
+                                    <div class="gradient-overlay"></div>
                                     <div className='p-2 px-4 flex gap-2'>
                                         {index === 0 ? (
                                             <Link to={`/detailed/${movie.id}`}>
