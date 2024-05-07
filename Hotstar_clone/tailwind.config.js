@@ -13,8 +13,8 @@ export default {
     screens: {
       "desktop": "1900px",
       "laptops": "1294px",
-      "tablets": "900px",
-      "mobiles": "400px"
+      "tablets": "540px",
+      "mobiles": "390px"
     },
     // screens: {
     //   "xs":"320px"

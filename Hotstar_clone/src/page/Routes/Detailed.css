@@ -67,3 +67,15 @@
   height: 2px; /* Adjust the height of the line */
   background-color: gray; /* Adjust the color of the line */
 }
+
+
+@media (max-width: 768px) {
+  .det-ul{
+    width: 2%;
+  }
+  .det-subscribe{
+    position:static;
+    margin-top: 8rem;
+    margin-left: 5rem;
+  }
+}

@@ -81,7 +81,7 @@ const HorrorMovies = () => {
                         </div>
                     ))}
                     <button className="arrow-btn right-arrow text-white" onClick={goToNextHorrorMovie}>
-                        <IoIosArrowForward className='arrow text-2xl'/>
+                        <IoIosArrowForward className='arrow text-2xl' />
                     </button>
                 </div>
             </div>
