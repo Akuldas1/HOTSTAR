@@ -8,6 +8,7 @@ import Movies from '../../components/Movies/Movies';
 import HorrorMovies from '../../components/Movies/HorrorMovies';
 import Footer from '../../components/Footer/Footer';
 import ComedyMovies from '../../components/Movies/ComedyMovies';
+import { Link } from 'react-router-dom';
 
 function Detailed() {
   const [isMuted, setIsMuted] = useState(true);
@@ -58,6 +59,9 @@ function Detailed() {
       </div>
       <br></br>
       <br></br>
+      <div className="line"></div>
+      <br></br>
+      <br></br>
       <div className='flex flex-col gap-10'>
         {/* <p className='text-blue-100 font-semibold text-xl font-body relative left-28'>More Like This</p> */}
         <div className='relative top-48'>
@@ -65,11 +69,22 @@ function Detailed() {
         </div>
         <div className='relative left-28'>
           <p className='text-blue-100 font-semibold text-xl font-body'>Trailers & More</p>
-          <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/6890/626890-h" className='h-28' />
-          <p id="trailer" className='text-zinc-100 font-semibold text-lg font-body'>Inside-Out Trailer</p>
+          <div className='show w-48'>
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/6890/626890-h" className='h-28' />
+            <p id="trailer" className='text-zinc-100 font-semibold text-lg font-body'>Inside-Out Trailer</p>
+            <button className='absolute bottom-8 left-2'><FaPlay className='fill-white h-3' /></button>
+          </div>
+
+        
+            <div className='hide bg-custom rounded'>
+             <Link to=""><img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/6890/626890-h" className='h-28'/></Link> 
+              <p id="trailer-hidden" className='p-1 text-zinc-100 text-sm font-semibold font-body'>Inside-Out Trailer</p>
+              <button className='absolute bottom-8 left-2'><FaPlay className='fill-white h-3' /></button>
+            </div>
+         
         </div>
         <Footer />
-      </div>
+      </div >
     </>
   )
 }

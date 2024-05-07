@@ -23,7 +23,7 @@
 
 .movie-slide:hover .movie-details {
   display: block;
- 
+  
 }
 
 .movie-slide:hover img {
@@ -35,8 +35,11 @@
   object-fit: cover;
 }
 
-.arrow{
-  right: 7rem;
+.right-arrow{
+  position: absolute;
+  right:7rem;
+  top: 8rem;
+
 } 
 
 @media (max-width: 768px) {

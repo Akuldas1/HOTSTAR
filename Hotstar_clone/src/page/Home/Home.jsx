@@ -13,11 +13,11 @@ import Disneyy from '../../components/Disney/Disney';
 
 function Home() {
 
- const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
   const toggleMute = () => {
     setIsMuted(prevMuted => !prevMuted);
   };
-  
+
   return (
     <>
       <video src={video} autoPlay loop muted={isMuted} className='' />
@@ -53,20 +53,19 @@ function Home() {
             <Image />
           </div>
           <div className='flex flex-col gap-8'>
-          {/* <Movies /> */}
-          <HorrorMovies/>
-          <ComedyMovies/>
+            {/* <Movies /> */}
+            <HorrorMovies />
+            <ComedyMovies />
           </div>
           <div className='relative bottom-40 h-10 p-1 left-28'>
             <p className='text-blue-100 font-semibold text-xl font-body mobiles:hidden tablets:hidden laptops:block'>Popular Languages</p>
             <Languages />
           </div>
-          <div>
-            <Disneyy/>
+          <div className='flex flex-col gap-16'>
+            <Disneyy />
+            <Footer />
           </div>
         </div>
-        <br></br>
-        <Footer/>
       </div>
     </>
   )
