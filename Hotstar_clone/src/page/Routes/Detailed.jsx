@@ -4,7 +4,6 @@ import { PiSpeakerSlash, PiSpeakerHighLight } from "react-icons/pi";
 import "../Routes/Detailed.css"
 import vid from "../../assets/video/video-2.mp4"
 import { fetchMovies } from '../../api/fetchMovies';
-import Movies from '../../components/Movies/Movies';
 import HorrorMovies from '../../components/Movies/HorrorMovies';
 import Footer from '../../components/Footer/Footer';
 import ComedyMovies from '../../components/Movies/ComedyMovies';
@@ -50,7 +49,7 @@ function Detailed() {
         </ul>
         <p className="det-p text-gray-300 w-1/3 font-body mobiles:hidden tablets:hidden laptops:block">When Riley's family relocates to a new city, the five emotions located in her mind have a difficult job at hand to save their and Riley's existence.</p>
         <p className='det-p2 text-white font-semibold font-body mobiles:hidden tablets:hidden laptops:block'>Animation &nbsp; |&nbsp; Kids &nbsp; | &nbsp; Fantasy &nbsp; | &nbsp;Adventure</p>
-        <button type='button' className='det-subscribe text-black bg-white text-xl font-semibold left-28 px-8 py-3.5 rounded-xl font-body hover:scale-105'><FaPlay className='absolute h-7 w-3 left-14' /> Subscribe to watch</button>
+        <button type='button' className='subscribe text-black bg-white text-xl font-semibold left-28 px-8 py-3.5 rounded-xl font-body hover:scale-105'><FaPlay className='absolute h-7 w-3 left-14' /> Subscribe to watch</button>
         <button type='button' className='det-plus text-black font-bold text-lg px-6 py-3.5 rounded-xl'>+</button>
       </div>
       <div className='text-white flex gap-10'>

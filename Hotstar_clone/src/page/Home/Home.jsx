@@ -3,7 +3,6 @@ import "../Home/Home.css"
 import Image from '../../components/Images/Images'
 import { FaCircle, FaPlay } from 'react-icons/fa'
 import { PiSpeakerSlash, PiSpeakerHighLight } from "react-icons/pi";
-import Movies from '../../components/Movies/Movies'
 import { useState } from 'react'
 import Languages from '../../components/Languages/Languages';
 import Footer from '../../components/Footer/Footer';
@@ -20,7 +19,7 @@ function Home() {
 
   return (
     <>
-      <video src={video} autoPlay loop muted={isMuted} className='' />
+      <video src={video} autoPlay loop muted={isMuted} className='w-full'/>
       <button
         type=''
         className='mute-toggle text-xl px-8 py-3.5 rounded-xl'

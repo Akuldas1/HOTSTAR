@@ -149,7 +149,7 @@ export default function Movies() {
 }
 
 
-//LINK
+// LINK
 // import React, { useEffect, useState } from 'react';
 // import "../style/Movie.css"
 // import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
