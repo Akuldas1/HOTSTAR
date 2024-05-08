@@ -9,7 +9,7 @@ const MovieDetail = () => {
   useEffect(() => {
     const fetchMovieDetail = async () => {
       try {
-        const resp = await fetch(`https://api.sampleapis.com/movies/${id}`);
+        const resp = await fetch(`https://api.sampleapis.com/movies/animation/${id}`);
         const json = await resp.json();
         setMovie(json);
       } catch (error) {
@@ -22,12 +22,12 @@ const MovieDetail = () => {
 
   if (!movie) return <div>Loading...</div>;
 
-  return (
-    <div>
+  return(
+ <>
       <h1 className='container bg-white'>{movie.title}</h1>
       <img src={movie.posterURL} alt={movie.title} className='h-96 w-full' />
       {/* Display other movie details here */}
-    </div>
+      </>
   );
 }
 
@@ -63,8 +63,6 @@ export default MovieDetail;
 
 //   return (
 //     <>
-//       <div className='flex flex-col gap-48'>
-//         <div className='first'>
 //           <img src={movie.posterURL} className="h-80"></img>
 //           <p className='font-body font-bold text-5xl text-white relative bottom-20 ml-28'>{movie.title}</p>
 //           <ul className='det-ul text-white flex gap-4 font-body font-bold'>
@@ -81,8 +79,7 @@ export default MovieDetail;
 
 //           <button type='button' className='text-black bg-white text-xl font-semibold relative left-28 top-40 px-20 py-3.5 rounded-xl font-body hover:scale-105'><FaPlay className='absolute h-7 w-3 left-14' /> Subscribe to watch</button>
 //           <button type='button' className='text-black bg-white font-bold text-lg px-6 py-3.5 rounded-xl relative top-40 left-32'>+</button>
-//         </div>
-
+      
 
 //         <div className=''>
 //           <div className='text-white flex gap-10'>
@@ -115,7 +112,7 @@ export default MovieDetail;
 //             <Footer />
 //           </div >
 //         </div>
-//       </div>
+     
 //     </>
 //   );
 // }
