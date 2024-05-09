@@ -52,6 +52,7 @@ function Detailed() {
         <button type='button' className='subscribe text-black bg-white text-xl font-semibold left-28 px-8 py-3.5 rounded-xl font-body hover:scale-105'><FaPlay className='absolute h-7 w-3 left-14' /> Subscribe to watch</button>
         <button type='button' className='det-plus text-black font-bold text-lg px-6 py-3.5 rounded-xl'>+</button>
       </div>
+      
       <div className='text-white flex gap-10'>
         <p className='text-white font-semibold text-xl font-body relative left-28'>More Like This</p>
         <p className='text-white font-semibold text-xl font-body relative left-28'>Trailers & More</p>

@@ -11,7 +11,7 @@ export default {
       }
     },
     screens: {
-      "desktop": "1900px",
+      "desktop": "1920px",
       "laptops": "1294px",
       "tablets": "540px",
       "mobiles": "390px"
