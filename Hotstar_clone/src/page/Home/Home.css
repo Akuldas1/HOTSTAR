@@ -1,3 +1,17 @@
+.video-player{
+    position: relative;
+  }
+  
+.video-player::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+    top: 0;
+    background:linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+    pointer-events: none; /* Ensure clicks pass through to the video element */
+}
 .mute-toggle{
     position:absolute;
     bottom:14rem;

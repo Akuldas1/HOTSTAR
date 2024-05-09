@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { FaCircle, FaPlay } from 'react-icons/fa'
+import "../../page/Routes/Detailed.css"
 import HorrorMovies from '../../components/Movies/HorrorMovies';
 import Footer from "../../components/Footer/Footer"
 
@@ -12,7 +13,7 @@ const MovieDetail = () => {
   useEffect(() => {
     const fetchMovieDetail = async () => {
       try {
-        const resp = await fetch(`https://api.sampleapis.com/movies/animation/${id}`);
+        const resp = await fetch(`https://api.sampleapis.com/movies/horror/${id}`);
         const json = await resp.json();
         setMovie(json);
       } catch (error) {
@@ -28,10 +29,10 @@ const MovieDetail = () => {
   return(
  <>
 
-      <img src={movie.posterURL} alt={movie.title} className='h-96 w-full opacity-25'/>
-      <p className='text-white font-body font-bold text-7xl italic relative bottom-40 left-28'>{movie.title}</p>
-      {/* Display other movie details here */}
-
+      <p className='text-white font-body font-bold text-7xl italic absolute top-56 left-28 w-full z-10'>{movie.title}</p>
+      <div className='video-player-container'>
+      <img src={movie.posterURL} alt={movie.title} className='h-screen relative w-full'/>
+      </div>
 
   <div className='flex flex-col gap-56'>
       <div className=''>
@@ -46,13 +47,13 @@ const MovieDetail = () => {
         </ul>
         <p className="det-p text-gray-300 w-1/3 font-body mobiles:hidden tablets:hidden laptops:block">When Riley's family relocates to a new city, the five emotions located in her mind have a difficult job at hand to save their and Riley's existence.</p>
         <p className='det-p2 text-white font-semibold font-body mobiles:hidden tablets:hidden laptops:block'>Animation &nbsp; |&nbsp; Kids &nbsp; | &nbsp; Fantasy &nbsp; | &nbsp;Adventure</p>
-        <button type='button' className='text-black relative left-28 top-24 bg-white text-xl font-semibold  px-20 py-3.5 rounded-xl font-body hover:scale-105'><FaPlay className='absolute h-7 w-3 left-14' /> Subscribe to watch</button>
-        <button type='button' className='text-black bg-white/30 font-bold text-lg px-6 py-3.5 rounded-xl relative left-32 top-24'>+</button>
+        <button type='button' className='text-black relative left-28 bottom-32 bg-white text-xl font-semibold  px-20 py-3.5 rounded-xl font-body hover:scale-105'><FaPlay className='absolute h-7 w-3 left-14' /> Subscribe to watch</button>
+        <button type='button' className='text-black bg-white/30 font-bold text-lg px-6 py-3.5 rounded-xl relative left-32 bottom-32'>+</button>
       </div>
 
 
 
-      <div className='text-white flex gap-10'>
+      <div className='text-white flex gap-10 absolute '>
         <p className='text-white font-semibold text-xl font-body relative left-28'>More Like This</p>
         <p className='text-white font-semibold text-xl font-body relative left-28'>Trailers & More</p>
       </div>

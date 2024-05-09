@@ -11,7 +11,7 @@ const ComedyMovies = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const comedyData = await fetchMovies('family');
+            const comedyData = await fetchMovies('comedy');
             setComedyMovies(comedyData);
         };
 
@@ -49,6 +49,9 @@ const ComedyMovies = () => {
                                 src={movie.posterURL}
                                 alt={movie.title}
                                 className="movie-poster h-52 rounded"
+                                onError={() => {
+                                    setComedyMovies(prevMovies => prevMovies.filter(m => m.id !== movie.id));
+                                }}
                             />
                             {hoveredMovie === movie && (
                                 <div className="movie-details bg-custom h-96 w-72 z-10 p-0 rounded-xl">

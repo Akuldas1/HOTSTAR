@@ -111,6 +111,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaCircle, FaPlay } from 'react-icons/fa';
+import { PiStarFill } from "react-icons/pi";
 import { fetchMovies } from '../../api/fetchMovies';
 
 const HorrorMovies = () => {
@@ -120,7 +121,7 @@ const HorrorMovies = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const horrorData = await fetchMovies('animation');
+            const horrorData = await fetchMovies('horror');
             setHorrorMovies(horrorData);
         };
 
@@ -157,11 +158,15 @@ const HorrorMovies = () => {
                                     src={movie.posterURL}
                                     alt={movie.title}
                                     className="movie-poster h-52 rounded"
+                                    onError={()=>{
+                                        setHorrorMovies(prevMovies => prevMovies.filter(m=> m.id != movie.id))
+                                    }}
                                 />
                       
                             {hoveredMovie === movie && (
                                 <div className="movie-details bg-custom h-96 w-72 z-10 p-0 rounded-xl">
                                     <img src={movie.posterURL} alt={movie.title} className="movie-poster h-48 w-full rounded-t-xl" />
+                                    {/* <button className='favourites'><PiStarFill className='absolute top-3 left-60 h-7 w-7'/></button> */}
                                     <div class="gradient-overlay"></div>
                                     <div className='p-2 px-4 flex gap-2'>
                                         <Link to={`/movie/${movie.id}`} className='text-black bg-white px-10 py-3 h-12 w-48 font-bold rounded p-2 flex gap-3'>
@@ -191,3 +196,4 @@ const HorrorMovies = () => {
 }
 
 export default HorrorMovies;
+

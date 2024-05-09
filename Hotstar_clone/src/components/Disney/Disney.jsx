@@ -5,8 +5,8 @@ import Disney from "../../assets/images/disneyog.webp"
 import Pixar from "../../assets/images/pixar.jpeg"
 import Marvel from "../../assets/images/marvel.webp"
 import Starwars from "../../assets/images/starwars.jpeg"
-import NG from "../../assets/images/download.png"
-import HS from "../../assets/images/hs.webp"
+import NG from "../../assets/images/ng.png"
+import HS from "../../assets/images/hotstar.png"
 
 function Disneyy() {
     const [isHovered, setIsHovered] = useState(false);
@@ -40,7 +40,7 @@ function Disneyy() {
 
                 <div className="img-cont" onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}>
-                    <img src={NG} className="thumbnail w-44 rounded"/>
+                    <img src={NG} className="thumbnail w-44 rounded h-26"/>
                     {isHovered && <video className="vid" src="https://img10.hotstar.com/video/upload/sources/r1/cms/animations/ojerhm_1587393280208" loop muted autoPlay />}
                 </div>
 
