@@ -214,6 +214,7 @@ const HorrorMovies = () => {
     const [horrorMovies, setHorrorMovies] = useState([]);
     const [horrorIndex, setHorrorIndex] = useState(0);
     const [hoveredMovie, setHoveredMovie] = useState(null);
+    const genre = 'horror'
     // const { addToFavorites } = useFavorites(); // Access addToFavorites function from context
     // const { removeFromFavorites } = useFavorites(); // Access addToFavorites function from context
 
@@ -308,7 +309,7 @@ const HorrorMovies = () => {
                                         <div class="gradient-overlay"></div>
                                         <div className='relative bottom-6'>
                                             <div className='p-2 px-4 flex gap-2'>
-                                                <Link to={`/movie/${movie.id}`} className='text-black bg-white px-10 py-3 h-12 w-48 font-bold rounded p-2 flex gap-3'>
+                                                <Link to={`/movie/${genre}/${movie.id}`} className='text-black bg-white px-10 py-3 h-12 w-48 font-bold rounded p-2 flex gap-3'>
                                                     <FaPlay className='relative h-3 top-1.5 w-3 left' />Watch now
                                                 </Link>
                                                 <button className='bg-white/55 p-2 w-12 rounded'>+</button>

@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaCircle, FaPlay } from 'react-icons/fa';
 import { fetchMovies } from '../../api/fetchMovies';
+import { Link } from 'react-router-dom';
 import "../Movies/Movie.css"
 
 const ComedyMovies = () => {
+    const genre = 'comedy';
     const [comedyMovies, setComedyMovies] = useState([]);
     const [comedyIndex, setComedyIndex] = useState(0);
     const [hoveredMovie, setHoveredMovie] = useState(null);
@@ -56,9 +58,18 @@ const ComedyMovies = () => {
                             {hoveredMovie === movie && (
                                 <div className="movie-details bg-custom h-96 w-72 z-10 p-0 rounded-xl">
                                     <img src={movie.posterURL} alt={movie.title} className="movie-poster h-48 w-full rounded-t-xl" />
-                                    <div class="gradient-overlay"></div>                                 
+                                    <button
+                                        className="favourites"
+                                        style={{ color: favorites.some((favMovie) => favMovie.id === movie.id) ? 'yellow' : 'initial' }}
+                                        onClick={() => handleFavoriteClick(movie)}
+                                    >
+                                        <PiStarFill className='absolute top-3 left-60 h-7 w-7' />
+                                    </button>
+                                    <div class="gradient-overlay"></div>
                                     <div className='p-2 px-4 flex gap-2'>
-                                        <button className='text-black bg-white px-10 py-3 h-12 w-48 font-bold rounded p-2 flex gap-3'><FaPlay className='relative h-3 top-1.5 w-3 left' />Watch now</button>
+                                        <Link to={`/movie/${genre}/${movie.id}`} className='text-black bg-white px-10 py-3 h-12 w-48 font-bold rounded p-2 flex gap-3'>
+                                            <FaPlay className='relative h-3 top-1.5 w-3 left' />Watch now
+                                        </Link>
                                         <button className='bg-white/55 p-2 w-12 rounded'>+</button>
                                     </div>
                                     <ul className='text-white flex font-body font-semibold text-left px-5'>

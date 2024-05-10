@@ -7,13 +7,13 @@ import HorrorMovies from '../../components/Movies/HorrorMovies';
 import Footer from "../../components/Footer/Footer"
 
 const MovieDetail = () => {
-  const { id } = useParams();
+  const { id , genre } = useParams();
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
     const fetchMovieDetail = async () => {
       try {
-        const resp = await fetch(`https://api.sampleapis.com/movies/horror/${id}`);
+        const resp = await fetch(`https://api.sampleapis.com/movies/${genre}/${id}`);
         const json = await resp.json();
         setMovie(json);
       } catch (error) {
