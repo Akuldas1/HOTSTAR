@@ -148,9 +148,9 @@ function Home() {
             <HorrorMovies />
             <ComedyMovies />
           </div>
-          <div className='relative bottom-40 h-10 p-1 left-28'>
+          <div className='relative bottom-40 h-10 left-28 flex flex-col gap-3'>
             <p className='text-blue-100 font-semibold text-xl font-body mobiles:hidden tablets:hidden laptops:block'>Popular Languages</p>
-            <div className='mobiles:hidden tablets:block laptops:block'>
+            <div className='mobiles:hidden tablets:block laptops:block z-10'>
               <Languages />
             </div>
           </div>

@@ -239,7 +239,7 @@ function Nav() {
 
   return (
     <>
-        <div className='absolute top-0 left-28 z-10'>
+        <div className='absolute top-6 left-28 z-10'>
         <Modal show={showModal} onClose={closeModal} favorites={favorites} />
         </div>
       <div className='nav bg-transparent h-screen w-28 z-10 fixed my-2'>
