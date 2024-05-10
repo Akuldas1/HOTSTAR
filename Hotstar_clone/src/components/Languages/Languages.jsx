@@ -73,14 +73,14 @@ function Languages() {
         //       }
         //     }
         //   ]
-    }; <div className=''></div>
+    }; 
 
     return (
         <>
             <div className='h-full'>
                 <div className='relative flex flex-col gap-32 h-10 mobiles:hidden tablets:hidden laptops:block'>
                     <Slider {...settings}>
-                        <div className=''>
+                        <div className='hover:scale-110'>
                             <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6661/1526661-a-00b818b5bc0e" alt="" className='w-60 rounded'/>
                         </div>
                         <div className=''>
