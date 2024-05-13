@@ -155,9 +155,9 @@ export default Home
 //         </div>
 
 //         <div className=''>
-//             <button type='button' className='subscribe text-white text-xl font-bold left-28 px-8 py-3.5 rounded-xl font-body hover:scale-105 hover:bg-white/50 mobiles:absoute mobiles:top-10 mobiles:w-auto tablets:absolute tablets:top-40 tablets:w-auto laptops:w-72 laptops:absolute laptops:top-2/3'><FaPlay className='play absolute h-6 w-3 left-12 mobiles:hidden tablets:hidded laptops:block desktop:block'/> Subscribe to watch</button>
-//             <button type='button' className='plus text-white font-bold text-lg px-6 py-3.5 rounded-xl mobiles:absoute mobiles:top-20 mobiles:left-28 mobiles:w-auto  tablets:absolute tablets:top-60 tablets:left-28 tablets:w-auto laptops:w-auto laptops:absolute laptops:left-1/3 laptops:top-2/3'>+</button>
-//           <div className='component tablets:absolute tablets:left-28 tablets:top-96 laptops:absolute laptops:top-2/3 laptops:left-2/4'>
+//             <button type='button' className='subscribe text-white text-xl font-bold left-28 px-12 py-3.5 rounded-xl font-body hover:scale-105 hover:bg-white/50 mobiles:absoute mobiles:top-10 mobiles:w-auto mobiles:h-14 mobiles:text-lg mobiles:p-1 tablets:absolute tablets:top-40 tablets:w-auto laptops:w-80 laptops:absolute laptops:top-2/3'><FaPlay className='play absolute h-7 w-3 left-12 mobiles:hidden tablets:hidden laptops:block desktop:block'/> Subscribe to watch</button>
+//             <button type='button' className='plus text-white font-bold text-lg px-6 py-3.5 rounded-xl mobiles:absoute mobiles:top-20 mobiles:left-28 mobiles:w-auto  tablets:absolute tablets:top-60 tablets:left-28 tablets:w-auto laptops:w-auto laptops:absolute laptops:left-1/3 laptops:top-2/3 laptops:ml-6'>+</button>
+//           <div className='component tablets:absolute tablets:left-28 tablets:top-96 laptops:absolute laptops:top-2/3 laptops:left-2/4 laptops:mt-2 laptops:ml-12'>
 //             <Image movieInfo={movieInfo} updateMovieInfo={updateMovieInfo} />
 //           </div>
 //           <div className='flex flex-col gap-8'>
@@ -166,8 +166,8 @@ export default Home
 //             <ComedyMovies />
 //           </div>
 //           <div className='relative bottom-40 h-10 left-28 flex flex-col gap-3'>
-//             <p className='text-blue-100 font-semibold text-xl font-body'>Popular Languages</p>
-//             <div className=''>
+//             <p className='text-blue-100 font-semibold text-xl font-body mobiles:relative mobiles:top-20 tablets:hidden laptops:block laptops:top-0'>Popular Languages</p>
+//             <div className='mobiles:relative mobiles:top-20 laptops:realtive laptops:top-0.5'>
 //               <Languages />
 //             </div>
 //           </div>
