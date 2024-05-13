@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import "../Disney/Disney.css"
 import Disney from "../../assets/images/disneyog.webp"
 import Pixar from "../../assets/images/pixar.jpeg"
 import Marvel from "../../assets/images/marvel.webp"
 import Starwars from "../../assets/images/starwars.jpeg"
 import NG from "../../assets/images/ng.png"
 import HS from "../../assets/images/hotstar.png"
+import "../Disney/Disney.css"
 
 function Disneyy() {
     const [isHovered, setIsHovered] = useState(false);

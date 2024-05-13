@@ -42,7 +42,6 @@
 
 } 
 
-
 .gradient-overlay {
   position: absolute;
   bottom: 12rem;
@@ -92,11 +91,7 @@
   }
 
   .right-arrow {
-    right: 0;
+    display: none;
   }
 
-  .movie-poster {
-    width: 90%; /* Adjust the width of movie posters */
-    height: 1px;
-  }
 }

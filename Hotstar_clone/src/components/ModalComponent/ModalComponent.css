@@ -1,7 +1,5 @@
-
-
 .modal {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 0 10rem rgba(167, 38, 38, 0.3);
@@ -10,6 +8,10 @@
 
 .modal-content{
   width: 100%;
+  background-color: #000000; 
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
 }
 
 .close {
@@ -26,7 +28,7 @@
   height: 240px;
   border-radius: 10px;
   overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  /* transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); */
 }
 
 /* .card:hover {
@@ -35,7 +37,8 @@
 
 .card__content {
   position: absolute;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
   top: 95%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -75,7 +78,7 @@
   width: 25px;
   height: 25px;
   border-radius: 100%;
-  background: rgb(149, 6, 6);
+  background: rgb(255, 0, 0);
   transition: all 0.3s ease-in-out 0s;
   /* box-shadow: rgba(193, 244, 246, 0.698) 0px 0px 0px 0px; */
   align-items: center;
@@ -84,4 +87,18 @@
 
 .button:is(:hover, :focus) {
   transform: scale(1.2);
+}
+
+.favorites-container {
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  z-index: 50;
+ /* Center items horizontally */
+}
+
+.favorites-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Adjust spacing between items */
+  z-index: 10;
 }

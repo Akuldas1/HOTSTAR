@@ -128,10 +128,10 @@ let slidesToShow = 4.5
 
 function Images({ movieInfo, updateMovieInfo }) {
     const handleClick = () => {
-    
+
         updateMovieInfo({
-            video:"https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/4736/1714809064736-i",
-            src:"https://img10.hotstar.com/image/upload/f_auto,h_148/sources/r1/cms/prod/8803/1714809038803-t",
+            video: "https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/4736/1714809064736-i",
+            src: "https://img10.hotstar.com/image/upload/f_auto,h_148/sources/r1/cms/prod/8803/1714809038803-t",
             year: "2024",
             duration: "2h 14min",
             languages: "5 Languages",
@@ -145,11 +145,18 @@ function Images({ movieInfo, updateMovieInfo }) {
         const { onClick, currentSlide } = props;
         return (
             <>
-                {currentSlide != 0 && (
+                {/* {currentSlide != 0 && (
                     <button className="arrow absolute h-11 top-0 -left-3 z-10 bg-gradient-to-r from-black" onClick={handleClick}>
                         <IoIosArrowBack style={{ color: 'white', fontSize: '30px' }} />
                     </button>
+                )} */}
+
+                {currentSlide > 0 && ( // Changed the condition to check if currentSlide is greater than 0
+                    <button className="arrow absolute h-11 top-0 -left-3 z-10 bg-gradient-to-r from-black" onClick={onClick}>
+                        <IoIosArrowBack style={{ color: 'white', fontSize: '30px' }} />
+                    </button>
                 )}
+
             </>
         );
     };
@@ -178,36 +185,9 @@ function Images({ movieInfo, updateMovieInfo }) {
         currentSlide: 0,
         prevArrow: <PrevArrow />,
         nextArrow: <NextArrow />,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
     };
 
-
-
+    
     return (
         <>
             <div className="slider-container w-96 flex flex-col gap-1">

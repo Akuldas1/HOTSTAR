@@ -6,7 +6,6 @@ import vid from "../../assets/video/video-2.mp4"
 import { fetchMovies } from '../../api/fetchMovies';
 import HorrorMovies from '../../components/Movies/HorrorMovies';
 import Footer from '../../components/Footer/Footer';
-import ComedyMovies from '../../components/Movies/ComedyMovies';
 import { Link } from 'react-router-dom';
 
 function Detailed() {

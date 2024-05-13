@@ -26,15 +26,15 @@ function Footer() {
 
                 <div>
                     <br></br>
-                <div className="font-body text-blue-gray-custom flex flex-col justify-between">© 2023 STAR. All Rights Reserved.</div>
+                    <div className="font-body text-blue-gray-custom flex flex-col justify-between">© 2023 STAR. All Rights Reserved.</div>
                     <ul className="font-body text-blue-gray-custom flex gap-2">
                         <li>Terms of use</li>
                         <li>Privacy Policy</li>
                         <li>FAQ</li>
                     </ul>
                     <div className="flex relative bottom-11 left-2/3 ">
-                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_256/v1661346101/google-playstore" className="h-10"/>
-                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_256/v1661346071/ios-appstore" className="h-10"/>
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_256/v1661346101/google-playstore" className="h-10" />
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_256/v1661346071/ios-appstore" className="h-10" />
                     </div>
                 </div>
             </div>

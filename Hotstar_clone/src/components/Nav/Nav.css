@@ -22,27 +22,12 @@ body{
   z-index:-1; 
 } 
 
-.nav-items:not(:hover)::after {
-  top:0;
-  left: 0;
-  width: 0;
-  height: 0;
-  background:none;
-}  
 
-
-
-/* .fav-count{
-  position: absolute;
-  background-color: yellow;
-  border-radius: 10rem;
-} */
-  .fav-count {
+.fav-count {
     position: absolute;
     top: -6px;
     right: -17px;
     background-color: rgb(255, 255, 255);
-    /* border: gray solid 2px; */
     border-radius: 50%;
     font-size: 0.7em;
     color: black;
@@ -51,6 +36,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
  

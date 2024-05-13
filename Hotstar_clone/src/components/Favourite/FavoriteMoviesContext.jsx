@@ -1,32 +1,64 @@
+import { createContext, useContext, useState, useEffect } from 'react';
 
-import React, { createContext, useContext, useState , useEffect} from 'react';
-const FavoritesContext = createContext();
+const HorrorMoviesContext = createContext();
 
-export const FavoritesProvider = ({ children }) => {
-    const [favorites, setFavorites] = useState(
-        JSON.parse(localStorage.getItem('favorites')) || []
-    );
-
-    const [favoritesCount, setFavoritesCount] = useState(favorites.length);
+export const HorrorMoviesProvider = ({ children }) => {
+    const [horrorFavorites, setHorrorFavorites] = useState([]);
+    const [horrorCount, setHorrorCount] = useState(0);
 
     useEffect(() => {
-        localStorage.setItem('favorites', JSON.stringify(favorites));
-        setFavoritesCount(favorites.length);
-    }, [favorites]);
+        setHorrorCount(horrorFavorites.length);
+    }, [horrorFavorites]);
 
-    const addToFavorites = (movie) => {
-        setFavorites((prevFavorites) => [...prevFavorites, movie]);
+    const addToHorrorFavorites = (movie) => {
+        setHorrorFavorites((prevFavorites) => [...prevFavorites, movie]);
     };
 
-    const removeFromFavorites = (movieId) => {
-        setFavorites((prevFavorites) => prevFavorites.filter((movie) => movie.id !== movieId));
+    const removeFromHorrorFavorites = (movieId) => {
+        setHorrorFavorites((prevFavorites) =>
+            prevFavorites.filter((movie) => movie.id !== movieId)
+        );
     };
 
     return (
-        <FavoritesContext.Provider value={{ favorites, addToFavorites, removeFromFavorites, favoritesCount }}>
+        <HorrorMoviesContext.Provider
+            value={{ horrorFavorites, horrorCount, addToHorrorFavorites, removeFromHorrorFavorites }}
+        >
             {children}
-        </FavoritesContext.Provider>
+        </HorrorMoviesContext.Provider>
     );
 };
 
-export const useFavorites = () => useContext(FavoritesContext);
+export const useHorrorFavorites = () => useContext(HorrorMoviesContext);
+
+
+const ComedyMoviesContext = createContext();
+
+export const ComedyMoviesProvider = ({ children }) => {
+    const [comedyFavorites, setComedyFavorites] = useState([]);
+    const [comedyCount, setComedyCount] = useState(0);
+
+    useEffect(() => {
+        setComedyCount(comedyFavorites.length);
+    }, [comedyFavorites]);
+
+    const addToComedyFavorites = (movie) => {
+        setComedyFavorites((prevFavorites) => [...prevFavorites, movie]);
+    };
+
+    const removeFromComedyFavorites = (movieId) => {
+        setComedyFavorites((prevFavorites) =>
+            prevFavorites.filter((movie) => movie.id !== movieId)
+        );
+    };
+
+    return (
+        <ComedyMoviesContext.Provider
+            value={{ comedyFavorites, comedyCount,addToComedyFavorites, removeFromComedyFavorites }}
+        >
+            {children}
+        </ComedyMoviesContext.Provider>
+    );
+};
+
+export const useComedyFavorites = () => useContext(ComedyMoviesContext);

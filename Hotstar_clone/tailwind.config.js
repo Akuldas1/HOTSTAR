@@ -16,9 +16,7 @@ export default {
       "tablets": "540px",
       "mobiles": "390px"
     },
-    // screens: {
-    //   "xs":"320px"
-    // },
+    
     fontFamily:{
        body:['Inter']
     }
