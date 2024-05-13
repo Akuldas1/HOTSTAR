@@ -4,6 +4,9 @@ export default {
     "./index.html",
     "./src/**/*.{html,jsx,js}"],
   theme: {
+    fontSize: {
+      '28rem': '28rem',
+    },
     extend: {
       colors: {
         'blue-gray-custom': '#8f98b2',
@@ -16,7 +19,7 @@ export default {
       "tablets": "540px",
       "mobiles": "390px"
     },
-    
+
     fontFamily:{
        body:['Inter']
     }

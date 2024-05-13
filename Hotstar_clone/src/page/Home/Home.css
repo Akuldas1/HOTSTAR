@@ -54,7 +54,7 @@
     top:28.5rem;
     left: 47rem;
 }
-
+/* 
 @media screen and (max-width: 768px) {
     .subscribe,
     .plus {
@@ -67,10 +67,10 @@
         display: none;
     }
 
-}
+} */
 
 
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
     .video-player::after {
       display: none; 
       width: auto;
@@ -93,4 +93,13 @@
     width: 5%;
 
   }
-}
+} */
+
+/* @media screen and (max-width: 400px) {
+    .home-img{
+        position: absolute;
+        left:28px;
+        top: 10px;
+        display: hidden;
+    }
+} */

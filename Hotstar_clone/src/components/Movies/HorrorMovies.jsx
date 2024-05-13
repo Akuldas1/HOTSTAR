@@ -9,8 +9,8 @@ import { PiStarFill } from "react-icons/pi";
 import Modal from '../ModalComponent/ModalComponent';
 
 const HorrorMovies = () => {
-    
-    const { horrorFavorites,addToHorrorFavorites, removeFromHorrorFavorites } = useHorrorFavorites();
+
+    const { horrorFavorites, addToHorrorFavorites, removeFromHorrorFavorites } = useHorrorFavorites();
     const [horrorMovies, setHorrorMovies] = useState([]);
     const [horrorIndex, setHorrorIndex] = useState(0);
     const [hoveredMovie, setHoveredMovie] = useState(null);
@@ -38,14 +38,14 @@ const HorrorMovies = () => {
 
 
     const handleFavoriteClick = (movie) => {
-        
+
         const isFavorite = horrorFavorites.some((favMovie) => favMovie.id === movie.id);
         if (isFavorite) {
             removeFromHorrorFavorites(movie.id);
         } else {
             addToHorrorFavorites(movie);
         }
-        setShowModal(true); 
+        setShowModal(true);
     };
 
     const closeModal = () => {
@@ -59,7 +59,7 @@ const HorrorMovies = () => {
             </div>
             <div className='movies-container'>
                 <div className='genre-container flex flex-col gap-1'>
-                    <p className='text-blue-100 font-semibold text-xl font-body'>Horror Movies</p>
+                    <p className='text-blue-100 font-semibold font-body'>Horror Movies</p>
                     <div className="movie-list flex gap-2 w-full">
                         <button className="arrow-btn left-arrow p-2 text-white z-10 w-10" onClick={goToPrevHorrorMovie}>
                             <IoIosArrowBack className='text-2xl' />
@@ -107,19 +107,19 @@ const HorrorMovies = () => {
                                                 <li>5 Languages</li>
                                             </ul>
                                             <p className='text-blue-gray-custom text-pretty text-left px-5 truncate'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde aliquid laborum praesentium, repudiandae repellat rem et</p>
-                                            </div>
                                         </div>
-                                )}
                                     </div>
-                                ))}
-                                <button className="arrow-btn right-arrow text-white" onClick={goToNextHorrorMovie}>
-                                    <IoIosArrowForward className='arrow text-2xl' />
-                                </button>
+                                )}
                             </div>
+                        ))}
+                        <button className="arrow-btn right-arrow text-white" onClick={goToNextHorrorMovie}>
+                            <IoIosArrowForward className='arrow text-2xl' />
+                        </button>
+                    </div>
                 </div>
-                </div>
-            </>
-            );
+            </div>
+        </>
+    );
 }
 
-            export default HorrorMovies;
+export default HorrorMovies;
