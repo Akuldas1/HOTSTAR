@@ -1,4 +1,4 @@
- .movies-container {
+.movies-container {
   position: relative;
   bottom: 200px;
   left: 7rem;
@@ -70,3 +70,33 @@
   }
 }
 
+@media (max-width: 400px) {
+  .movies-container {
+    left: 5rem;
+    padding: 0 1rem;
+    bottom: 0;
+  }
+
+  .movie-slide {
+    width: 20px;
+    left: 0;
+  }
+
+  .genre-container {
+    align-items: flex-start;
+  }
+
+  .arrow-btn {
+    position: absolute;
+    top: 8rem;
+  }
+
+  .right-arrow {
+    right: 0;
+  }
+
+  .movie-poster {
+    width: 90%; /* Adjust the width of movie posters */
+    height: 1px;
+  }
+}

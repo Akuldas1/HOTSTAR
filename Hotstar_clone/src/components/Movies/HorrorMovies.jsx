@@ -289,7 +289,7 @@ const HorrorMovies = () => {
                                 <img
                                     src={movie.posterURL}
                                     alt={movie.title}
-                                    className="movie-poster h-52 rounded"
+                                    className="movie-poster h-52 rounded desktop:h-64"
                                     onError={() => {
                                         setHorrorMovies(prevMovies => prevMovies.filter(m => m.id !== movie.id))
                                     }}

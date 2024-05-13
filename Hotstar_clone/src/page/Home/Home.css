@@ -1,3 +1,4 @@
+
 .video-player{
     position: relative;
   }
@@ -76,3 +77,27 @@
         left: 10%;
     }
 } */
+
+@media screen and (max-width: 400px) {
+    .video-player::after {
+      display: none; /* Hide gradient overlay at smaller widths */
+      width: auto;
+    }
+  
+    .component {
+      display: none; /* Hide the component containing the image */
+    }
+  
+    .home-img{
+        display: none;
+    }
+    ul {
+     position: absolute; /* Set position to absolute */
+    top: 0; /* Position ul at the top */
+    left: 0; /* Align left */
+    width: 100%; /* Make ul full width */
+    padding: 1rem; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+  }
