@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import newVideo from "../../assets/video/videoplayback.mp4"
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Slider from 'react-slick';
+import newVideo from "../../assets/video/videoplayback.mp4"
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 let slidesToShow = 4.5
 
-
-function Images({ movieInfo, updateMovieInfo }) {
+function Images({ updateMovieInfo }) {
     const handleClick = () => {
 
         updateMovieInfo({
@@ -32,7 +31,7 @@ function Images({ movieInfo, updateMovieInfo }) {
                     </button>
                 )} */}
 
-                {currentSlide > 0 && ( // Changed the condition to check if currentSlide is greater than 0
+                {currentSlide > 0 && (
                     <button className="arrow absolute h-11 top-0 -left-3 z-10 bg-gradient-to-r from-black" onClick={onClick}>
                         <IoIosArrowBack style={{ color: 'white', fontSize: '30px' }} />
                     </button>
@@ -60,10 +59,10 @@ function Images({ movieInfo, updateMovieInfo }) {
         dots: false,
         infinite: false,
         speed: 500,
+        currentSlide: 0,
         slidesToShow: 4.5,
         slidesToScroll: 5,
         TotalSlidesCount: 10,
-        currentSlide: 0,
         prevArrow: <PrevArrow />,
         nextArrow: <NextArrow />,
     };

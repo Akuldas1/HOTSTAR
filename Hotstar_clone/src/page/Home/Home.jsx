@@ -131,7 +131,7 @@ function Home() {
       </div>
       <button
         type=''
-        className='mute-toggle text-xl px-8 py-3.5 rounded-xl '
+        className='mute-toggle text-xl px-8 py-3.5 rounded-xl mobiles:hidden tablets:hidden laptops:block desktop:block'
         onClick={toggleMute}
       >
         {isMuted ? <PiSpeakerSlash className='unmute fill-white' /> : <PiSpeakerHighLight className='mute fill-white mobiles:hidden tablets:hidden laptops:block desktop:block' />}
@@ -157,7 +157,7 @@ function Home() {
         <div className=''>
             <button type='button' className='subscribe text-white text-xl font-bold left-28 px-12 py-3.5 rounded-xl font-body hover:scale-105 hover:bg-white/50 mobiles:absoute mobiles:top-10 mobiles:w-auto mobiles:h-14 mobiles:text-lg mobiles:p-1 tablets:absolute tablets:top-40 tablets:w-auto laptops:w-80 laptops:absolute laptops:top-2/3 desktop:w-96 desktop:mt-10'><FaPlay className='play absolute h-7 w-3 left-12 mobiles:hidden tablets:hidden laptops:block desktop:block desktop:left-20'/> Subscribe to watch</button>
             <button type='button' className='plus text-white font-bold text-lg px-6 py-3.5 rounded-xl mobiles:absoute mobiles:top-20 mobiles:left-28 mobiles:w-auto  tablets:absolute tablets:top-60 tablets:left-28 tablets:w-auto laptops:w-auto laptops:absolute laptops:left-1/3 laptops:top-2/3 laptops:ml-6 desktop:mt-10'>+</button>
-          <div className='component tablets:absolute tablets:left-28 tablets:top-96 laptops:absolute laptops:top-2/3 laptops:left-2/4 laptops:mt-2 laptops:ml-12  desktop:mt-14'>
+          <div className='component mobiles:hidden tablets:hidden laptops:block desktop:block tablets:absolute tablets:left-28 tablets:top-96 laptops:absolute laptops:top-2/3 laptops:left-2/4 laptops:mt-2 laptops:ml-12  desktop:mt-14'>
             <Image movieInfo={movieInfo} updateMovieInfo={updateMovieInfo} />
           </div>
           <div className='flex flex-col gap-8'>

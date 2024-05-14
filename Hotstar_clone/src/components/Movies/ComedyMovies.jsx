@@ -89,20 +89,20 @@ const ComedyMovies = () => {
                                             <PiStarFill className='absolute top-3 left-60 h-7 w-7' />
                                         </button>
                                         <div class="gradient-overlay"></div>
-                                        <div className='p-2 px-4 flex gap-2'>
+                                        <div className='p-2 px-4 flex gap-2 relative bottom-6'>
                                             <Link to={`/movie/${genre}/${movie.id}`} className='text-black bg-white px-10 py-3 h-12 w-48 font-bold rounded p-2 flex gap-3'>
                                                 <FaPlay className='relative h-3 top-1.5 w-3 left' />Watch now
                                             </Link>
                                             <button className='bg-white/55 p-2 w-12 rounded'>+</button>
                                         </div>
-                                        <ul className='text-white flex font-body font-semibold text-left px-5'>
+                                        <ul className='text-white flex font-body font-semibold text-left px-5 relative bottom-6'>
                                             <li>2023 </li>
                                             <FaCircle className='h-1 relative top-2.5'></FaCircle>
                                             <li>2h 26min</li>
                                             <FaCircle className='h-1 relative top-2.5'></FaCircle>
                                             <li>5 Languages</li>
                                         </ul>
-                                        <p className='text-blue-gray-custom text-pretty text-left px-5 truncate'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque explicabo dolores numquam natus aliquam maiores </p>
+                                        <p className='text-blue-gray-custom text-pretty text-left px-5 truncate relative bottom-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque explicabo dolores numquam natus aliquam maiores </p>
                                     </div>
                                 )}
                             </div>

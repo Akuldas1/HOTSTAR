@@ -43,11 +43,3 @@ function Footer() {
 }
 
 export default Footer
-//    <div class="row text-white">
-//     <div class="col-span-4">
-//         <p>Company</p>
-//         <p>View Website in</p>
-//         <p>Need Help?</p>
-//         <p>Connect with us</p>
-//     </div>
-//    </div>
