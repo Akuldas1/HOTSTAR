@@ -26,7 +26,7 @@ function Languages() {
         const { onClick, slideCount, currentSlide } = props;
         return (
             <>
-                {currentSlide !== slideCount - slidesToShow && (
+                {currentSlide !== slideCount-slidesToShow && (
 
                     <button className={'lang-farrow'} onClick={onClick}>
                         <IoIosArrowForward style={{ color: 'white', fontSize: '30px' }} />
