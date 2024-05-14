@@ -250,10 +250,7 @@ const Modal = ({ show, onClose }) => {
                                     </div>
                                 </div>
                             ))}
-                        </div>
-                    </div>
-                    <div className='favorites-container'>
-                        <div className='favorites-list'>
+                       
                             {comedyFavorites.map((movie) => (
                                 <div key={movie.id} className="card">
                                     <img src={movie.posterURL} alt={movie.title} className="poster" />

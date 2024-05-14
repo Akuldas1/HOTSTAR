@@ -12,9 +12,9 @@ function Disneyy() {
     const [isHovered, setIsHovered] = useState(false);
     return (
         <>
-            <div className="flex relative left-28 gap-2">
+            <div className="flex relative left-28 gap-2">   
                 <div className="img-cont" onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}>
+                >
                     <img src={Disney} className="thumbnail w-44 rounded"/>
                     {isHovered && <video className="vid" src="https://img10.hotstar.com/video/upload/sources/r1/cms/animations/qh3yh_1587393133132" loop muted autoPlay />}
                 </div>

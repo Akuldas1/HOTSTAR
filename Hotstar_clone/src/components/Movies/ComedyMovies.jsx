@@ -80,7 +80,7 @@ const ComedyMovies = () => {
                                 />
                                 {hoveredMovie === movie && (
                                     <div className="movie-details bg-custom h-96 w-72 z-10 p-0 rounded-xl">
-                                        <img src={movie.posterURL} alt={movie.title} className="movie-poster h-48 w-full rounded-t-xl" />
+                                        <img src={movie.posterURL} alt={movie.title} className="movie-poster h-48 w-full rounded-t-xl"/>
                                         <button
                                             className="favourites"
                                             style={{ color: comedyFavorites.some((favMovie) => favMovie.id === movie.id) ? 'yellow' : 'initial' }}
