@@ -2,7 +2,7 @@
   background-color: rgba(0, 0, 0, 0.432);
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 0 0 0 black, inset 15px 15px 15px 0px rgba(219, 208, 208, 0.384);
+  box-shadow: inset 15px 15px 15px 15px rgba(219, 208, 208, 0.384);
   width:auto;
 }
 
