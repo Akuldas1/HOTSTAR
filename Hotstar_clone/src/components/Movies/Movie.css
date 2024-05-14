@@ -52,6 +52,7 @@
   mix-blend-mode: multiply; 
 }
 
+
 @media (max-width: 768px) {
   .movies-container {
     left: 10%;

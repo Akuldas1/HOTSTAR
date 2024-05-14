@@ -54,6 +54,7 @@ const HorrorMovies = () => {
 
     return (
         <>
+             
             <div className='absolute top-6 left-28'>
                 <Modal show={showModal} onClose={closeModal} />
             </div>

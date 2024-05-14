@@ -22,6 +22,7 @@ function Nav({ onFavoritesClick }) {
 
   return (
     <>
+      {showModal && <div className='blur' />}
       <div className='absolute top-6 left-28 z-10'>
         <Modal show={showModal} onClose={closeModal} />
       </div>
