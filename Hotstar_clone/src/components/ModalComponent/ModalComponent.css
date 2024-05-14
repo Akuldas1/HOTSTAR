@@ -2,8 +2,8 @@
   background-color: rgb(0, 0, 0);
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 0 10rem rgba(167, 38, 38, 0.3);
-  width: auto;
+  box-shadow: 0 0 0 0 black, inset 15px 15px 15px 0px rgba(219, 208, 208, 0.384);
+  width:auto;
 }
 
 .modal-content{
